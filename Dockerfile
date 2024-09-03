@@ -17,7 +17,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN usermod -u 1000 www-data
 
 RUN apt-get update -y && apt-get upgrade --fix-missing -y && apt-get install -y webp libfreetype6-dev libwebp-dev jpegoptim libpng-dev  \
-    curl ca-certificates zip unzip git supervisor cron ffmpeg \
+    curl ca-certificates zip unzip git supervisor cron libjpeg62-turbo-dev \
     openssl curl libonig-dev tzdata libxslt-dev tar zip unzip zlib1g-dev zlib1g libzip-dev libbz2-dev nano
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp
