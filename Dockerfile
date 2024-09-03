@@ -28,7 +28,7 @@ RUN docker-php-ext-install gd soap pdo_mysql opcache mbstring \
 
 RUN pecl channel-update pecl.php.net &&  echo yes | pecl install igbinary redis swoole zstd lzf mongodb
 
-RUN docker-php-ext-enable redis lzf zstd swoole mongodb
+RUN docker-php-ext-enable redis lzf zstd swoole mongodb igbinary
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
