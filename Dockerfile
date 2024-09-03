@@ -26,7 +26,7 @@ RUN docker-php-ext-install gd soap pdo_mysql opcache mbstring \
         mysqli gettext calendar bz2 exif gettext \
         sockets sysvmsg sysvsem sysvshm xsl zip xml intl bcmath pcntl
 
-RUN pecl channel-update pecl.php.net &&  echo yes | pecl install redis swoole zstd lzf mongodb
+RUN pecl channel-update pecl.php.net &&  echo yes | pecl install igbinary redis swoole zstd lzf mongodb
 
 RUN docker-php-ext-enable redis lzf zstd swoole mongodb
 
