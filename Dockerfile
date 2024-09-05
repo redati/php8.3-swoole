@@ -20,8 +20,9 @@ RUN apt-get update -y && apt-get upgrade --fix-missing -y && apt-get install -y 
     curl ca-certificates zip unzip git supervisor cron libjpeg62-turbo-dev \
     openssl curl libonig-dev tzdata libxslt-dev tar zip unzip zlib1g-dev zlib1g libzip-dev libbz2-dev nano
 
-RUN apt-get install -y libcurl4-openssl-dev pkg-config libssl-dev
+RUN apt-get install -y libsnappy-dev libzstd-dev
 
+RUN apt-get install -y libcurl4-openssl-dev pkg-config libssl-dev
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp
 
